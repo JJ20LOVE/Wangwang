@@ -1,0 +1,6 @@
+com\itcaptain\ecnutrade\pojo\UserExample.class
+com\itcaptain\ecnutrade\dao\UserDao.class
+com\itcaptain\ecnutrade\pojo\UserExample$Criterion.class
+com\itcaptain\ecnutrade\pojo\UserExample$GeneratedCriteria.class
+com\itcaptain\ecnutrade\pojo\UserExample$Criteria.class
+com\itcaptain\ecnutrade\pojo\User.class
