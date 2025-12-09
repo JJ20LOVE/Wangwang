@@ -38,7 +38,7 @@ public class User implements Serializable {
     /**
      * 用户电话号码
      */
-    private Integer phoneNumber;
+    private String phoneNumber;
 
     /**
      * 上传校园卡或者学生证的地址
@@ -97,11 +97,11 @@ public class User implements Serializable {
         this.weixinId = weixinId;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

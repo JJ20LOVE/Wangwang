@@ -58,8 +58,13 @@ public class Product implements Serializable {
      */
     private String campus;
 
-
+    /**
+     * 发布时间
+     */
+    private String publishTime;
+;
     private static final long serialVersionUID = 1L;
+
 
     public Integer getProductId() {
         return productId;
@@ -141,6 +146,14 @@ public class Product implements Serializable {
         this.campus = campus;
     }
 
+    public String getPublishTime() {
+        return publishTime;
+    }
+
+    public void setPublishTime(String publishTime) {
+        this.publishTime = publishTime;
+    }
+
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -162,7 +175,8 @@ public class Product implements Serializable {
                 && (this.getDescription() == null ? other.getDescription() == null : this.getDescription().equals(other.getDescription()))
                 && (this.getPicture() == null ? other.getPicture() == null : this.getPicture().equals(other.getPicture()))
                 && (this.getCategories() == null ? other.getCategories() == null : this.getCategories().equals(other.getCategories()))
-                && (this.getCampus() == null ? other.getCampus() == null : this.getCampus().equals(other.getCampus()));
+                && (this.getCampus() == null ? other.getCampus() == null : this.getCampus().equals(other.getCampus()))
+                && (this.getPublishTime() == null ? other.getPublishTime() == null : this.getPublishTime().equals(other.getPublishTime()));
     }
 
     @Override
@@ -179,6 +193,7 @@ public class Product implements Serializable {
         result = prime * result + ((getPicture() == null) ? 0 : getPicture().hashCode());
         result = prime * result + ((getCategories() == null) ? 0 : getCategories().hashCode());
         result = prime * result + ((getCampus() == null) ? 0 : getCampus().hashCode());
+        result = prime * result + ((getPublishTime() == null) ? 0 : getPublishTime().hashCode());
         return result;
     }
 
@@ -198,6 +213,7 @@ public class Product implements Serializable {
         sb.append(", picture=").append(picture);
         sb.append(", categories=").append(categories);
         sb.append(", campus=").append(campus);
+        sb.append(", publishTime=").append(publishTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

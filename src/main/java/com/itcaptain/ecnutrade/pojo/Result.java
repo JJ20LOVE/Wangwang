@@ -15,7 +15,7 @@ public class Result<T> {
 
     //返回操作成功响应结果(带相应数据)
     public static <E> Result<E> success(E data) {
-        return new Result<>(1, "操作成功",null);
+        return new Result<>(1, "操作成功",data);
     }
 
     //返回操作成功响应结果
