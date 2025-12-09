@@ -9,6 +9,8 @@ import com.itcaptain.ecnutrade.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin(origins = "http://localhost:8080/")
 @RestController
 @RequestMapping("/product")
@@ -42,7 +44,31 @@ public class   ProductController {
         User seller = userService.selectUserById(sellerId);
         return new ProductDetailResponse(product, seller);
     }
+
+    @GetMapping("/myProduct")
+    public List<Product> selectProductBySeller(Integer seller_id) {
+        return productService.selectProductBySellerId(seller_id);
+    }
+
+    @GetMapping("/deleteProduct")
+    public Result deleteProductById(Integer product_id){
+        productService.deleteProductById(product_id);
+        return Result.success(null);
+    }
+
+    @PostMapping("/publish")
+    public Result publishProduct(@RequestBody Product product){
+        productService.publishProduct(product);
+        return Result.success(null);
+    }
+
+    @GetMapping("/list")
+    public List<Product> list(){
+       return productService.selectProduct();
+    }
+
 }
+
 
 class ProductDetailResponse {
     private Product product;

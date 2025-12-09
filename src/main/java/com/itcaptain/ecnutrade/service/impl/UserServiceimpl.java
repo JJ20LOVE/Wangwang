@@ -17,11 +17,11 @@ public class UserServiceimpl implements UserService {
     }
 
     @Override
-    public void register(String username, String password) {
+    public void register(String username, String password, String phoneNumber) {
         //加密处理
         //添加
         //这里我为了省事不搞了
-        userMapper.add(username,password);
+        userMapper.add(username,password,phoneNumber);
     }
 
     @Override

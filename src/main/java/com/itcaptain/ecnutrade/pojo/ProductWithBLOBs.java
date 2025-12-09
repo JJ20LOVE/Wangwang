@@ -32,6 +32,11 @@ public class ProductWithBLOBs extends Product implements Serializable {
      */
     private String campus;
 
+    /**
+     * 发布时间
+     */
+    private String publishTime;
+
     private static final long serialVersionUID = 1L;
 
     public String getProductName() {

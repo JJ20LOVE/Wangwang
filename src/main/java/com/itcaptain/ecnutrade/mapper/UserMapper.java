@@ -10,11 +10,11 @@ public interface UserMapper {
     User findByUserName(String username);
 
     //添加
-    @Insert("insert into user(username,password)"+
-            "values(#{username},#{password})")
-    void add(String username, String password);
+    @Insert("insert into user(username,password,phone_number)"+
+            "values(#{username},#{password},#{phoneNumber})")
+    void add(String username, String password, String phoneNumber);
 
-    @Update("update user set email = #{email},weixinId = #{weixinId},phonenumber = #{phoneNumber} where id = #{id}")
+    @Update("update user set username = #{username},password = #{password},phone_number = #{phoneNumber} where id = #{id}")
     void update(User user);
 
     @Delete("delete from user where id = #{id}")
